@@ -1,0 +1,1307 @@
+@charset "UTF-8";
+
+@import url(https://fonts.googleapis.com/css?family=PT+Sans+Caption:regular,700);
+
+@import url(https://fonts.googleapis.com/css?family=Forum:regular);
+
+/* Указываем box sizing */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #212339;
+  font-family: "PT Sans Caption";
+  font-size: 18px;
+  color: #fff;
+  height: 100%;
+}
+
+body._active {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+[class*=__container] {
+  max-width: 1230px;
+  padding: 0px 15px;
+  margin: auto;
+}
+
+.header {
+  flex: 0 1 auto;
+  z-index: 50;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header__container {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  z-index: 2;
+}
+
+.header__menu {
+  transition: transform 0.3s ease 0s;
+}
+
+.header__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0px 15px;
+}
+
+.header__item:not(:last-child) {
+  margin: 0px 40px 0px 0px;
+}
+
+.header__link {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 166.6666666667%;
+}
+
+.header__link:hover {
+  text-decoration: underline;
+}
+
+.header__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  min-height: 50px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 187.5%;
+  transition: all 0.3s ease 0s;
+  position: relative;
+}
+
+.header__button img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header__button:hover {
+  opacity: 0.8;
+}
+
+.header__burger {
+  display: none;
+  z-index: 2;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+._back {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.dignity {
+  height: 827px;
+  position: relative;
+}
+
+.dignity__container {
+  position: relative;
+  z-index: 2;
+  top: 170px;
+}
+
+.dignity__title {
+  font-family: "Forum";
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 113.5135135135%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-shadow: 0px 8px 10px rgba(0, 0, 0, 0.6);
+  -webkit-text-stroke: 1px #ffffff;
+  line-height: 120%;
+}
+
+.dignity__subtitle {
+  font-family: "PT Sans Caption";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  max-width: 682px;
+  margin: auto;
+  padding: 30px 0px 28px 0px;
+  text-align: center;
+}
+
+.dignity__body {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.dignity__items {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
+.dignity__item:nth-child(1) {
+  flex: 0 1 31%;
+}
+
+.dignity__item:nth-child(2) {
+  flex: 0 1 37%;
+}
+
+.dignity__item:nth-child(3) {
+  flex: 0 1 32%;
+}
+
+.dignity__button {
+  margin: 57px 0px 117px 0px;
+}
+
+.title {
+  font-family: "Forum";
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 48px;
+  line-height: 133.3333333333%;
+  -webkit-text-stroke: 1px #ffffff;
+}
+
+.item-dignity {
+  display: flex;
+  align-items: start;
+  font-family: "PT Sans Caption";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 155.5555555556%;
+}
+
+.item-dignity__num {
+  position: relative;
+  left: 0;
+  top: -20px;
+  font-family: "Forum";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 84px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background: linear-gradient(140.11deg, #0625B3 12.41%, #061D88 80.54%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  text-shadow: 0px 8px 10px rgba(0, 0, 0, 0.6);
+  margin: 0px 20px 0px 0px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+}
+
+.button__body {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  min-width: 290px;
+  min-height: 70px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 187.5%;
+  transition: all 0.5s ease 0s;
+}
+
+.button__body:hover {
+  opacity: 0.8;
+}
+
+.button__image {
+  position: absolute;
+  top: -18%;
+}
+
+.button__image img {
+  width: 100%;
+}
+
+.button__text {
+  z-index: 2;
+}
+
+.devices {
+  min-height: 992px;
+  position: relative;
+  padding: 120px 0px;
+}
+
+.devices__container {
+  position: relative;
+  z-index: 2;
+}
+
+.devices__title {
+  -webkit-text-stroke: 1px #ffffff;
+  max-width: 717px;
+  margin: auto;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 133.3333333333%;
+}
+
+.devices__body {
+  margin: 90px 0px 0px 0px;
+  height: 400px;
+  position: relative;
+}
+
+.devices__items {
+  position: relative;
+  width: 100%;
+}
+
+.devices__phone {
+  position: absolute;
+  top: 45px;
+  left: 18px;
+  z-index: 4;
+}
+
+.devices__money_1 {
+  position: absolute;
+  z-index: 2;
+  top: 268px;
+  left: 83px;
+}
+
+.devices__money_2 {
+  position: absolute;
+  z-index: 2;
+  top: 268px;
+  left: 922px;
+}
+
+.devices__laptop {
+  position: absolute;
+  z-index: 1;
+  left: 298px;
+}
+
+.devices__ipad {
+  position: absolute;
+  left: 851px;
+  top: 34px;
+  z-index: 3;
+}
+
+.center {
+  position: relative;
+  min-height: 992px;
+}
+
+.center__container {
+  position: relative;
+  z-index: 2;
+  padding: 120px 15px;
+}
+
+.center__title {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 133.3333333333%;
+  max-width: 744px;
+  margin: 0 auto;
+  -webkit-text-stroke: 0px #ffffff;
+}
+
+.center__title span {
+  display: block;
+  margin: 12px 0px 42px 0px;
+  -webkit-text-stroke: 1px #ffffff;
+}
+
+.center__body {
+  margin: 0px -15px;
+}
+
+.center__items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.center__item {
+  flex: 0 1 50%;
+  padding: 15px;
+}
+
+.item-center__body {
+  height: 100%;
+  background: linear-gradient(93.76deg, #1C1C1C 0%, #242424 100%);
+  border: 1px solid rgba(6, 29, 136, 0.3);
+  box-shadow: 0px 13px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 20px 20px 20px 30px;
+}
+
+.item-center__learn {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  height: 190px;
+  width: 60%;
+}
+
+.item-center__title {
+  font-family: "Forum";
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 166.6666666667%;
+  letter-spacing: 0.03em;
+  color: #fff;
+}
+
+.item-center__text {
+  flex: 1 1 auto;
+  font-family: "PT Sans Caption";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.item-center__button {
+  position: relative;
+  left: -65px;
+}
+
+.item-center__button .button__body {
+  font-family: "PT Sans Caption";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 187.5%;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.item-center__button .button__image {
+  width: 200px;
+}
+
+.item-center__button .button__image img {
+  position: relative;
+  top: 14px;
+}
+
+.item-center__image {
+  flex: 0 1 57%;
+}
+
+.item-center__image img {
+  width: 100%;
+}
+
+.advantages {
+  position: relative;
+  min-height: 854px;
+}
+
+.advantages__container {
+  padding: 110px 0px 120px 0px;
+  position: relative;
+  z-index: 2;
+}
+
+.advantages__title {
+  margin: 0px 0px 25px 0px;
+}
+
+.advantages__subtitle {
+  max-width: 790px;
+  margin: auto;
+}
+
+.advantages__body {
+  margin: 45px -13px 60px -13px;
+  padding: 0px 15px;
+}
+
+.advantages__items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advantages__block {
+  margin: 13px;
+  background: linear-gradient(93.76deg, #1C1C1C 0%, #242424 100%);
+  border: 1px solid rgba(6, 29, 136, 0.3);
+  box-shadow: 0px 13px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advantages__item {
+  flex: 0 1 25%;
+}
+
+.advantages__image {
+  flex: 0 1 120px;
+  margin: 26px 0px 16px 0px;
+}
+
+.advantages__image img {
+  height: 100%;
+}
+
+.advantages__text {
+  flex: 0 1 55%;
+  text-align: center;
+  font-family: "PT Sans Caption";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  max-width: 235px;
+}
+
+.subtitle {
+  font-family: "Forum";
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 153.8461538462%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.accounts {
+  position: relative;
+  min-height: 1897px;
+}
+
+.accounts__container {
+  position: relative;
+  max-width: 960px;
+  z-index: 2;
+  padding: 120px 15px 140px 15px;
+  box-sizing: content-box;
+}
+
+.accounts__title {
+  margin: 0px 0px 30px 0px;
+}
+
+.accounts__subtitle {
+  max-width: 744px;
+  margin: 0 auto;
+}
+
+.accounts__body {
+  padding: 10px 0px 20px 0px;
+}
+
+.accounts__items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin: 0px -30px;
+}
+
+.accounts__item {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 33.333%;
+  padding: 25px;
+}
+
+.accounts__button {
+  margin: -25px 0px 0px 0px;
+}
+
+.accounts__button__body {
+  min-width: 160px;
+  min-height: 50px;
+}
+
+.accounts__button .button__text {
+  margin: -20px 0px 0px 0px;
+}
+
+.accounts__button img {
+  width: 220px;
+}
+
+.accounts__text {
+  text-align: center;
+  font-family: "PT Sans Caption";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: #FFFFFF;
+  max-width: 600px;
+  margin: auto;
+  border-radius: 5px;
+  border: 1px solid #061D88;
+  padding: 16px 18px;
+}
+
+.accounts__text span {
+  font-weight: 700;
+}
+
+.item-accounts__body {
+  flex: 1 1 auto;
+  max-width: 280px;
+  margin: 0 auto;
+  background: linear-gradient(93.76deg, #1C1C1C 0%, #242424 100%);
+  border: 1px solid rgba(6, 29, 136, 0.3);
+  box-shadow: 0px 13px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  min-height: 590px;
+  padding: 30px 10px;
+}
+
+.item-accounts__name {
+  position: relative;
+  text-align: center;
+  padding: 0px 50px 11px 50px;
+  margin: 0px 0px 25px 0px;
+  background: linear-gradient(93.76deg, rgba(6, 37, 179, 0.2) 0%, rgba(6, 29, 136, 0.2) 100%);
+  border: 1px solid #061D88;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.item-accounts__title {
+  font-family: "Forum";
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 192.3076923077%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.item-accounts__line {
+  display: block;
+  position: absolute;
+  right: 25px;
+  width: 200px;
+  height: 1px;
+  background-color: #fff;
+}
+
+.item-accounts__price {
+  font-family: "PT Sans Caption";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #FFFFFF;
+  margin: 8px 0px 0px 0px;
+}
+
+.item-accounts__info {
+  font-family: "PT Sans Caption";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 157.1428571429%;
+  text-align: center;
+  color: #FFFFFF;
+  margin: 0px 0px 10px 0px;
+}
+
+.contacts {
+  position: relative;
+  min-height: 895px;
+}
+
+.contacts__container {
+  position: relative;
+  z-index: 2;
+  padding: 110px 15px 20px 15px;
+}
+
+.contacts__form {
+  max-width: 590px;
+  margin: 50px auto 120px auto;
+}
+
+.form-contacts__body {
+  min-height: 517px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(93.76deg, #1C1C1C 0%, #242424 100%);
+  border: 1px solid rgba(6, 29, 136, 0.3);
+  box-shadow: 0px 13px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 30px 100px;
+}
+
+.form-contacts__text {
+  font-family: "PT Sans Caption";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  text-align: center;
+  color: #FFFFFF;
+  margin: 0px 0px 40px 0px;
+}
+
+.form-contacts__inputs {
+  text-align: center;
+}
+
+.form-contacts__input {
+  background: linear-gradient(93.76deg, #1C1C1C 0%, #242424 100%);
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  color: #fff;
+  min-width: 320px;
+  min-height: 62px;
+  padding: 15px;
+}
+
+.form-contacts__input:not(:last-child) {
+  margin: 0px 0px 20px 0px;
+}
+
+.form-contacts__input:focus {
+  outline: 1px solid #fff;
+}
+
+.form-contacts__button {
+  margin: -35px 0px 0px 0px;
+}
+
+.footer {
+  min-height: 200px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  display: flex;
+}
+
+.footer a {
+  display: block;
+}
+
+.footer__container {
+  width: 1000%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__tel {
+  margin: 0px 88px 0px 0px;
+}
+
+@media (max-width: 1230px) {
+  [class*=__container] {
+    max-width: 1022px;
+    margin: auto;
+  }
+
+  .header__item:not(:last-child) {
+    margin: 0px 30px 0px 0px;
+  }
+
+  .header__link {
+    font-size: 17px;
+  }
+
+  .devices {
+    min-height: 792px;
+    padding: 100px 0px;
+  }
+
+  .devices__title {
+    font-size: 34px;
+    max-width: 519px;
+  }
+
+  .devices__body {
+    left: -108px;
+    height: 305px;
+  }
+
+  .devices__phone {
+    left: 220px;
+    top: 40px;
+    width: 222px;
+  }
+
+  .devices__money_1 {
+    top: 190px;
+    left: 223px;
+    width: 162px;
+  }
+
+  .devices__money_2 {
+    top: 190px;
+    left: 772px;
+    width: 162px;
+  }
+
+  .devices__laptop {
+    width: 432px;
+    left: 370px;
+  }
+
+  .devices__ipad {
+    top: 35px;
+    left: 691px;
+    width: 360px;
+  }
+
+  .advantages__item {
+    flex: 0 1 50%;
+  }
+
+  .advantages__image {
+    flex: 0 1 110px;
+  }
+
+  .advantages__text {
+    font-size: 14px;
+    max-width: 290px;
+  }
+}
+
+@media (max-width: 1022px) {
+  [class*=__container] {
+    max-width: 798px;
+    margin: auto;
+  }
+
+  .header__logo {
+    width: 170px;
+  }
+
+  .header__item:not(:last-child) {
+    margin: 0px 10px 0px 0px;
+  }
+
+  .header__link {
+    font-size: 16px;
+  }
+
+  .dignity {
+    height: 803px;
+  }
+
+  .dignity__container {
+    top: 140px;
+  }
+
+  .dignity__title {
+    font-size: 60px;
+  }
+
+  .dignity__title {
+    font-size: 50px;
+  }
+
+  .dignity__subtitle {
+    font-size: 18px;
+  }
+
+  .dignity__subtitle {
+    padding: 29px 0px 20px 0px;
+  }
+
+  .dignity__item:nth-child(1) {
+    flex: 0 1 29%;
+  }
+
+  .dignity__item:nth-child(2) {
+    flex: 0 1 34%;
+  }
+
+  .dignity__item:nth-child(3) {
+    flex: 0 1 37%;
+  }
+
+  .item-dignity__num {
+    margin: 0px 10px 0px 0px;
+  }
+
+  .item-dignity {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1020px) {
+  .title {
+    font-size: 34px;
+  }
+
+  .devices__body {
+    left: -208px;
+  }
+
+  .center__container {
+    padding: 100px 10px;
+  }
+
+  .center__title {
+    font-size: 34px;
+    max-width: 559px;
+  }
+
+  .center__title span {
+    margin: 8px 0px 57px 0px;
+  }
+
+  .item-center__body {
+    padding: 15px 0px 30px 20px;
+  }
+
+  .item-center__title {
+    font-size: 22px;
+  }
+
+  .item-center__text {
+    font-size: 14px;
+  }
+
+  .item-center__image {
+    flex: 0 1 90%;
+  }
+
+  .advantages__container {
+    padding: 70px 0px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    max-width: 519px;
+  }
+
+  .accounts__container {
+    padding: 100px 15px 120px 15px;
+  }
+
+  .accounts__title {
+    margin: 0px 0px 20px 0px;
+  }
+
+  .accounts__subtitle {
+    max-width: 465px;
+  }
+
+  .accounts__item {
+    flex: 0 1 50%;
+  }
+
+  .contacts {
+    min-height: 835px;
+  }
+
+  .contacts__container {
+    padding: 90px 15px 0px 15px;
+  }
+
+  .footer__tel {
+    margin: 0;
+  }
+}
+
+@media (max-width: 798px) {
+  [class*=__container] {
+    max-width: none;
+  }
+
+  .header__menu {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translate(0, -100%);
+  }
+
+  .header__menu._active {
+    transform: translate(0, 0);
+  }
+
+  .header__items {
+    position: relative;
+    display: block;
+    z-index: 2;
+    top: 120px;
+    left: 20px;
+  }
+
+  .header__item:not(:last-child) {
+    margin: 0px 0px 15px 0px;
+  }
+
+  .header__link {
+    font-size: 30px;
+  }
+
+  .header__button {
+    display: none;
+  }
+
+  .header__burger {
+    display: block;
+  }
+
+  .dignity__body {
+    max-width: none;
+    margin: 0px 15px;
+  }
+
+  .dignity__item:nth-child(1) {
+    flex: 0 1 30%;
+  }
+
+  .dignity__item:nth-child(2) {
+    flex: 0 1 39%;
+  }
+
+  .dignity__item:nth-child(3) {
+    flex: 0 1 33%;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .item-dignity__num {
+    margin: 0px 5px 0px 0px;
+  }
+
+  .devices__body {
+    position: static;
+    height: 478px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .devices__phone {
+    width: 197px;
+    top: 210px;
+    left: 17%;
+  }
+
+  .devices__money_1 {
+    width: 144px;
+    top: 336px;
+    left: 12%;
+  }
+
+  .devices__money_2 {
+    display: block;
+    width: 144px;
+    top: 335px;
+    left: 55%;
+  }
+
+  .devices__laptop {
+    width: 316px;
+    position: static;
+    margin: 0 auto;
+  }
+
+  .devices__ipad {
+    width: 350px;
+    position: relative;
+    top: 0;
+    left: 45%;
+  }
+
+  .center__item {
+    flex: 0 1 100%;
+  }
+
+  .item-center__body {
+    justify-content: space-between;
+  }
+
+  .item-center__image {
+    flex: 0 1 40%;
+  }
+
+  .advantages__item {
+    flex: 0 1 100%;
+  }
+
+  .accounts__title {
+    margin: 0px 0px 10px 0px;
+  }
+
+  .contacts {
+    min-height: 800px;
+  }
+
+  .contacts__container {
+    padding: 80px 15px 0px 15px;
+  }
+
+  .footer__container {
+    flex-direction: column;
+    padding: 40px 0px;
+  }
+
+  .footer__logo {
+    flex: 0 1 100%;
+    margin: 0px 0px 23px 0px;
+  }
+
+  .footer__email {
+    flex: 0 1 100%;
+    margin: 0px 0px 19px 0px;
+  }
+
+  .footer__tel {
+    flex: 0 1 100%;
+    margin: 0px 0px 0px 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .accounts__text {
+    font-size: 16px;
+    max-width: none;
+  }
+}
+
+@media (max-width: 698px) {
+  .accounts__item {
+    flex: 0 1 100%;
+  }
+}
+
+@media (max-width: 606px) {
+  .dignity__title {
+    font-size: 30px;
+  }
+
+  .dignity__subtitle {
+    font-size: 16px;
+  }
+
+  .dignity__items {
+    flex-wrap: wrap;
+  }
+
+  .dignity__item:nth-child(1) {
+    flex: 0 1 100%;
+  }
+
+  .dignity__item:nth-child(2) {
+    flex: 0 1 100%;
+  }
+
+  .dignity__item:nth-child(3) {
+    flex: 0 1 100%;
+  }
+
+  .devices__title {
+    font-size: 30px;
+    max-width: 312px;
+  }
+
+  .center__title {
+    font-size: 30px;
+    max-width: 323px;
+  }
+
+  .center__title span {
+    margin: px 0px 35px 0px;
+  }
+
+  .item-center__image {
+    flex: 0 1 100%;
+  }
+
+  .contacts__form {
+    max-width: none;
+  }
+
+  .form-contacts__body {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 560px) {
+  .devices__phone {
+    width: 197px;
+    top: 210px;
+    left: 12%;
+  }
+}
+
+@media (max-width: 500px) {
+  .devices__ipad {
+    width: 350px;
+    position: relative;
+    top: 0;
+    left: 30%;
+  }
+}
+
+@media (max-width: 412px) {
+  .form-contacts__input {
+    min-width: 150px;
+  }
+}
+
+@media (max-width: 390px) {
+  .header__logo {
+    width: 117px;
+  }
+
+  .header__items {
+    left: 0px;
+  }
+
+  .header__link {
+    font-size: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
